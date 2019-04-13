@@ -6,4 +6,5 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 @RestResource
 public interface UsersRepository extends MongoRepository<Users, String> {
+     Users  findByUsername(String username);
 }
