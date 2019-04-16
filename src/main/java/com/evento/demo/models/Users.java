@@ -98,4 +98,18 @@ public class Users {
         this.etat = etat;
         this.contry = contry;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", email='" + email + '\'' +
+                ", tel='" + tel + '\'' +
+                ", etat=" + etat +
+                ", contry='" + contry + '\'' +
+                '}';
+    }
 }

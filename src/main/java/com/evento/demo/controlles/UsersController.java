@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
+
 @CrossOrigin("*")
 @RestController
 public class UsersController {
@@ -36,6 +39,18 @@ public class UsersController {
         } else {
             return true;
         }
-
     }
+
+    @GetMapping("users")
+    public List<Users> ListeUser(){
+        return usersRepository.findAll();
+    }
+
+    @GetMapping("/users/{id}")
+    public Optional<Users> getByid(@PathVariable String id){
+       return usersRepository.findById(id);
+    }
+
+
+
 }
