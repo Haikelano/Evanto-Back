@@ -51,6 +51,11 @@ public class UsersController {
        return usersRepository.findById(id);
     }
 
+    @PutMapping("/users/update")
+    public void UpdateUser(@RequestBody Users users){
+        usersRepository.save(users);
+    }
+
 
 
 }
